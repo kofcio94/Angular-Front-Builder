@@ -48,7 +48,7 @@ finalPathFront=$frontPath$subPath
 
 #setting path to androi repo
 subPath='/supermemo-com-android/app/src/main'
-androidPath='/home/'$USER'Repo/android'
+androidPath='/home/'$USER'/Repo/android'
 for (( i=0;i<$ELEMENTS;i++)); do 
 	if [ ${args[${i}]} == '--path_android' ] ; then
 		androidPath=${args[${i+1}]}
@@ -105,7 +105,7 @@ for (( i=0;i<$ELEMENTS;i++)); do
 	fi
 done
 
-if [ bin == 'false' ] ; then
+if [ $bin == 'false' ] ; then
 	mkdir $finalPathAndroid'/assets'
 	mkdir $finalPathAndroid'/assets/www'
 	cp -rf $finalPathFront'/build' $finalPathAndroid'/assets/www'
@@ -113,10 +113,3 @@ if [ bin == 'false' ] ; then
 fi
 
 cd "$currentPath"
-
-
-
-
-
-
-
